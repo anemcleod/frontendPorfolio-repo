@@ -1,0 +1,258 @@
+.slider-window
+        overflow-y: auto
+        max-height: 70vh
+        width: 100vw
+
+.portfolio-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    margin-top: 40px
+    .thumbnail
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 50px
+    .thumbnail-image-container
+        height: 180px
+        width: 300px
+        background-color: white
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 10px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+    .thumbnail-title-container
+        width: 300px
+    h4
+        font-family: $font
+        font-weight: 500
+        text-transform: capitalize
+        font-size: 20px
+        text-align: center
+        margin-top: 25px
+        position: relative
+        z-index: 10px
+        &:before
+            content: ""
+            background-image: url(brush.png)
+            position: absolute
+            background-size: 300px
+            background-repeat: no-repeat
+            background-position: center
+            width: 300px
+            height: 50px
+            left: 0
+            top: -15px
+            z-index: -10
+
+.project, .contact
+    position: absolute
+    width: 100%
+    min-height: 100%
+    top: 0
+    right: 0
+    z-index: 100
+    padding: 25px 0
+    background-color: $bg-grey
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow-y: auto
+    
+.project-container, .contact-container
+    background-color: white
+    padding: 5vw
+    width: 90vw
+    height: fit-content
+    display: flex
+    flex-direction: column
+
+.project-screenshot-container
+    background-color: $bg-grey
+    width: 80vw
+    height: 48vw
+    background-size: cover
+    background-position: top center
+                    
+.project-header, .contact-header
+    position: relative
+    background-color: $bg-yellow
+    margin-top: 5vw
+    padding: 10px
+
+    .portfolio-exit-icon
+        position: absolute
+        right: 10px
+        top: 10px
+        cursor: pointer
+        font-size: 20px
+        &:hover
+            color: $dirty-yellow
+    h2
+        margin-top: 15px
+        text-transform: capitalize
+        font-size: 50px
+    .tech
+        background-color: $dirty-yellow
+        padding: 8px 12px
+        margin-right: 10px
+        margin-bottom: 10px
+        border-radius: 5px
+        display: inline-block
+        font-size: 12px
+.project-summary 
+    p
+        color: rgb(116, 117, 109)
+        margin: 20px 0
+        font-size: 12
+.project-nav
+    margin: 0 auto
+    width: fit-content
+.project-btn, .form-submit  
+    background-color: $bg-yellow
+    border: none
+    width: 120px
+    height: 40px
+    display: inline-block 
+    margin: 10px
+    font-size: 18px
+    font-weight: 700
+    cursor: pointer
+    &:hover
+        color: $dirty-yellow
+.contact-form
+    display: flex
+    flex-direction: column
+    align-items: center
+    .form-input
+        color: rgb(116, 117, 109)
+        font-family: $font
+        font-size: 16px
+        border: none
+        border-bottom: 1px solid rgba(116, 117, 109, 0.5)
+        width: 80%
+       
+        &:focus
+            outline: none
+    .basic-input
+        padding-top: 15px
+        padding-bottom: 5px
+        margin-top: 25px
+
+    textarea
+        margin-top: 5px
+        resize: none
+        outline: none
+        border-bottom: 1px solid rgba(116, 117, 109, 0.5)
+.success-message, .error-message 
+    margin-top: 20px
+.success-message
+    color: $bg-yellow
+.error-message
+    color: rgb(192, 58, 58)
+
+
+@media screen and (min-width: 900px)
+    .slider-window
+        width: 100%
+        min-height: 300px
+        overflow: hidden
+
+    .slider-btn-container
+        position: absolute
+        height: 280px
+        width: 10%
+        display: flex
+        justify-content: center
+        cursor: pointer
+        .dot
+            height: 10px
+            width: 10px
+            border-radius: 5px
+            background-color: white
+            opacity: 0.5
+            margin-top: 6vw
+            transition: transform 0.3s ease, opacity 0.3s ease  
+    
+        &:hover 
+            .dot
+                opacity: 1
+                transform: scale(3)
+                
+
+    .slider-btn-container.prev
+        left: -10%
+
+    .slider-btn-container.next
+        right: -10%
+
+    .slides-container
+        height: fit-content
+        display: flex
+        align-items: center
+        transition: transform 1s ease
+
+    .portfolio-container
+        flex-direction: row
+        .thumbnail
+            margin-bottom: 0px
+            margin-right: 4vw
+            cursor: pointer
+            &:hover
+                h4
+                    &:before
+                        opacity: 1
+                        background-size: 24vw
+                        width: 24vw
+                        max-width: 24vw
+        .thumbnail-image-container
+            height: 14.4vw
+            width: 24vw
+        h4
+            font-size: 20px
+            &:before
+                opacity: 0
+                max-width: 0
+                transition: max-width 0.7s ease, opacity 0.7s ease
+        .thumbnail-title-container
+            width: 24vw
+
+    .project-container, .contact-container
+        padding: 2vw
+        width: 84vw
+    .project-container
+        flex-direction: row
+    .project-screenshot-container
+        width: 35vw
+        height: auto
+        
+    .project-details-container
+        width: 45vw
+        height: fit-content
+   
+    .project-details-container
+        padding-left: 20px
+    .project-header, .contact-header
+        margin-top: 0
+        h2
+            font-size: 60px
+            margin-bottom: 15px
+
+@media screen and (min-width: 1600px)
+    .slider-window
+        min-height: 400px
+    .portfolio-container
+        h4
+            text-align: left
+            padding-left: 50px
+    .project-container
+        width: 64vw
+    .project-screenshot-container, .project-details-container
+        width: 30vw
+        

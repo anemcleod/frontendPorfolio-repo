@@ -1,0 +1,263 @@
+.App
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100vh
+    background-color: $bg-yellow
+    font-family: $font
+    transition: background-color 1s ease
+    // overflow: hidden
+
+.App-scroll-one
+    background-color: $bg-grey
+
+.filter
+    position: absolute
+    z-index: -10
+    width: 100%
+    height: 100%
+    background-color: rgba($bg-yellow, 0.2)
+    transition: background-color 1s ease
+.filter-scroll-one
+    background-color: rgba($bg-grey, 0.45)
+.portfolio-arrow-icon
+    font-size: 35px
+    position: absolute
+    bottom: 15px
+    right: 15px
+    z-index: 50px
+    animation-duration: 3s
+    animation-iteration-count: infinite
+    animation-delay: 1s
+    transform-origin: bottom
+    cursor: pointer
+.portfolio-arrow-icon.bounce-2
+    animation-name: bounce-2
+    animation-timing-function: ease
+.portfolio-arrow-icon.flip
+    transform: rotate(180deg)
+    transform-origin: center
+
+@keyframes bounce-2 
+    0%   
+        transform: translateY(0)
+    50%  
+        transform: translateY(-20px)
+    100% 
+        transform: translateY(0)
+
+
+.bg-container
+    height: 100%
+    width: 100%
+    position: relative
+
+.bg-container-scroll-one
+    overflow: hidden
+
+.main-container
+    position: absolute
+    display: flex
+    flex-wrap: wrap
+    height: 100%
+    width: 100%
+    z-index: 20
+    justify-content: center
+
+.swoosh
+    width: 90vw
+    height: auto
+    position: absolute
+    right: 0
+    bottom: 0
+    z-index: 1
+
+.bg-img
+    position: absolute
+    bottom: 0
+    right: 10vw
+    z-index: 10
+    width: 90%
+
+.bg-palms
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 50%
+
+.header-container
+    display: flex
+    flex-wrap: wrap
+    height: fit-content
+.greet-img-container
+    display: flex
+    justify-content: center
+    width: 100%
+    max-width: 100%
+    height: fit-content
+    margin-top: 80px
+    transition: max-width 1s ease
+    .greet-img
+        width: 90%
+        cursor: pointer
+    .greet-img.scroll-one
+        opacity: 0  
+
+
+.icon-container
+    display: flex
+    justify-content: center
+    font-size: 50px
+    width: 100%
+    max-width: 100%
+    height: fit-content
+    margin-top: 25px
+    transition: max-width 1s ease
+    div
+        margin: 10px
+        cursor: pointer
+        border-radius: 5px
+        transition: background-color 0.5s ease
+        &:hover
+            background-color: $bg-yellow
+
+.header-container-scroll-one
+    justify-content: space-evenly
+    align-self: flex-start
+
+.greet-img-container-scroll-one
+    width: 30%
+    max-width: 30%
+    margin-top: 25px
+    .greet-img
+            width: 100%
+.icon-container-scroll-one
+    max-width: 45%  
+    justify-content: flex-end
+    div
+        margin: 0
+        margin-left: 10px
+
+.sub-title-container
+    align-self: flex-end
+    padding: 20px
+    h2
+        font-weight: 500
+        font-size: 25px
+        text-align: center
+        span
+            font-weight: 700
+
+
+@media screen and (min-width: 500px)
+    .greet-img-container
+        .greet-img
+            width: 60%
+            max-width: 60%
+    .icon-container
+        font-size: 60px
+    .sub-title-container
+        h2
+            font-size: 35px
+    
+
+        
+
+
+@media screen and (min-width: 900px)
+    .App
+        height: auto
+        min-height: 100vh
+    .portfolio-arrow-icon
+        font-size: 45px
+        bottom: 25px
+        right: 0px
+
+    .main-container
+        justify-content: flex-start
+
+    .main-container-scroll-one
+        justify-content: center
+    .bg-container
+        width: 80vw
+        height: 47vw
+    .swoosh
+        width: 54%
+        height: auto
+        path
+            transition: fill 1s ease, fill-opacity 1s ease
+    .bg-img
+        width: 41%
+    .bg-palms
+        width: 30%
+    .header-container
+        height: 57%
+        width: 100%
+        align-self: flex-end
+    .greet-img-container
+        width: 50%
+        max-width: 50%
+        align-self: flex-end
+        justify-content: flex-start
+        padding-left: 25px
+        .greet-img
+            width: 75%
+            max-width: 75%
+    .icon-container
+        width: 50%
+        max-width: 50%
+        flex-direction: column
+        align-items: flex-end
+        font-size: 80px
+        align-self: flex-end
+        padding-right: 5%
+        margin-bottom: -10px
+        transition: max-width 1s ease, font-size 1s ease
+
+    .header-container-scroll-one
+        justify-content: space-between
+        height: fit-content
+        margin-top: 25px
+        align-self: flex-start
+
+    .greet-img-container-scroll-one
+        align-self: flex-start
+        max-width: 21%
+        margin: 0
+        padding-left: 0
+        .greet-img
+                width: 100%
+                max-width: 100%
+    .icon-container-scroll-one  
+        align-self: flex-start
+        justify-content: flex-end
+        font-size: 40px
+        margin: 0
+        padding-right: 0
+        div
+            margin-bottom: 10px
+
+    .sub-title-container-scroll-one
+        width: 100%
+        h2
+            text-align: center
+            margin: 0 auto
+ 
+     
+@media screen and (min-width: 1600px)
+    .portfolio-arrow-icon
+        font-size: 75px
+    .icon-container
+       padding-right: 7%
+       font-size: 120px
+       margin-bottom: -20px
+       div
+           margin: 20px
+    .sub-title-container
+        h2
+            font-size: 60px
+    .icon-container-scroll-one  
+        font-size: 60px
+        div
+           margin: 0px
+           margin-bottom: 20px
