@@ -61,13 +61,13 @@ function App() {
                               type: "spring"
                             }}
                             className="bg-palms" 
-                            src="palmtrees.png" 
+                            src={pageData ? pageData.location_image.url :''}  
                             alt=""/>
           }
 
           <img 
             className="bg-img" 
-            src="cutout.png" 
+            src={pageData ? pageData.background_portrait.url :''}  
             alt=""/>
           
           <div className={`main-container ${page === 2 ? "main-container-scroll-one": ""}`}> 
@@ -80,7 +80,7 @@ function App() {
 
                   <img 
                     className={`greet-img  ${page === 3 ? "greet-img-scroll-one": ""}`} 
-                    src="helloW.png" alt=""/>
+                    src={pageData ? pageData.greeting_image.url :''} alt=""/>
               </div>
               
               <div className={`icon-container ${page > 1 ? "icon-container-scroll-one": ""}`}>
