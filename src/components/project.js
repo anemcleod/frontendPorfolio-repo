@@ -50,13 +50,13 @@ const Project = () => {
 
                     <div className="project-nav">
                         <a 
-                            href={currentProject.github_project_link.url} 
+                            href={currentProject.project_link.url} 
                             target="_blank" rel="noreferrer">
                                 <button className="project-btn">view</button>
                         </a>
 
                         <a 
-                            href={currentProject.project_link.url} 
+                            href={currentProject.github_project_link.url} 
                             target="_blank" rel="noreferrer">
                                 <button className="project-btn">code</button>
                         </a>
