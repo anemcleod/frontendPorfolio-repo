@@ -49,20 +49,21 @@ const Contact = ({showContactHandler}) => {
                 <form className="contact-form" onSubmit={sendEmail}>
                     <input type="hidden" 
                            name="contact_number"/>
-                
+                    
+                    <input className="form-input basic-input" 
+                           type="email" 
+                           name="user_email" 
+                           placeholder="your email" />
+
                     <input className="form-input basic-input" 
                            type="text" 
                            name="subject" 
                            placeholder="subject"/>
                    
-                    <input className="form-input basic-input" 
-                           type="email" 
-                           name="user_email" 
-                           placeholder="email" />
             
                     <textarea className="form-input" 
                               name="message" 
-                              rows="5"
+                              rows="4"
                               placeholder="message"/>
 
                     {
