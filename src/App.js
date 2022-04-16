@@ -121,7 +121,7 @@ function App() {
                                         initial={{ opacity: 0 }} 
                                         animate={{ opacity: 1 }} 
                                         transition={{ duration: 1 }} 
-                                        className="sub-title-container">
+                                        className="sub-title-container sub-title_1">
                                         {pageData ? RichText.render(pageData.page_one_subtitle) : null}
                                     </motion.div>
                                   ) : null

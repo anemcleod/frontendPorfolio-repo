@@ -2,11 +2,10 @@
     display: flex
     justify-content: center
     align-items: center
-    height: 100vh
+    height: calc(100vh - 3px)
     background-color: $bg-yellow
     font-family: $font
     transition: background-color 1s ease
-    // overflow: hidden
 
 .App-scroll-one
     background-color: $bg-grey
@@ -150,6 +149,13 @@
         span
             font-weight: 700
 
+@media screen and (max-width: 400px)
+    .bounce-2
+        bottom: 50%
+        right: 46%
+    .sub-title_1
+        padding-bottom: 35px
+
 
 @media screen and (min-width: 500px)
     .greet-img-container
@@ -172,7 +178,7 @@
         min-height: 100vh
     .portfolio-arrow-icon
         font-size: 45px
-        bottom: 25px
+        bottom: 35px
         right: 0px
 
     .main-container
@@ -182,7 +188,7 @@
         justify-content: center
     .bg-container
         width: 80vw
-        height: 47vw
+        height: 45vw
     .swoosh
         width: 54%
         height: auto

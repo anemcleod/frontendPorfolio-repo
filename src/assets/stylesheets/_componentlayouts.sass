@@ -71,19 +71,22 @@
     width: 90vw
     height: fit-content
     display: flex
-    flex-direction: column
+    flex-direction: column-reverse
 
 .project-screenshot-container
     background-color: $bg-grey
     width: 80vw
     height: 48vw
+    margin-top: 5vw
     background-size: cover
     background-position: top center
-                    
+
+.contact-header
+    margin-top: 5vw 
+           
 .project-header, .contact-header
     position: relative
     background-color: $bg-yellow
-    margin-top: 5vw
     padding: 10px
 
     .portfolio-exit-icon
@@ -161,7 +164,7 @@
 @media screen and (min-width: 900px)
     .slider-window
         width: 100%
-        min-height: 300px
+        min-height: 270px
         overflow: hidden
 
     .slider-btn-container
@@ -222,7 +225,7 @@
                 transition: max-width 0.7s ease, opacity 0.7s ease
         .thumbnail-title-container
             width: 24vw
-
+    .project-header   
     .project-container, .contact-container
         padding: 2vw
         width: 84vw
@@ -231,6 +234,7 @@
     .project-screenshot-container
         width: 35vw
         height: auto
+        margin-top: 0
         
     .project-details-container
         width: 45vw
@@ -238,8 +242,12 @@
    
     .project-details-container
         padding-left: 20px
+         
+    .project-header
+        margin-top: 5vw
+    .contact-header
+        margin-top: 0  
     .project-header, .contact-header
-        margin-top: 0
         h2
             font-size: 60px
             margin-bottom: 15px
