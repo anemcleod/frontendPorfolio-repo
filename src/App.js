@@ -36,6 +36,9 @@ function App() {
   }
 
   useEffect(() =>{
+    if(page === 1){
+      setTimeout(() => {scrollHandler();}, 4000)
+    }
     if(page === 2){
       setPortfolio(true);
     } else {
