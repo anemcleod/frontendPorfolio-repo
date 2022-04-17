@@ -14,6 +14,7 @@
         flex-direction: column
         align-items: center
         margin-bottom: 50px
+        position: relative
     .thumbnail-image-container
         height: 180px
         width: 300px
@@ -29,6 +30,13 @@
             object-position: center
     .thumbnail-title-container
         width: 300px
+    .brushstroke path
+            stroke-dasharray: 461
+            stroke-dashoffset: 0
+    .brushstroke
+        position: absolute 
+        bottom: -10px
+        z-index: -10  
     h4
         font-family: $font
         font-weight: 500
@@ -38,18 +46,6 @@
         margin-top: 25px
         position: relative
         z-index: 10px
-        &:before
-            content: ""
-            background-image: url(brush.png)
-            position: absolute
-            background-size: 300px
-            background-repeat: no-repeat
-            background-position: center
-            width: 300px
-            height: 50px
-            left: 0
-            top: -15px
-            z-index: -10
 
 .project, .contact
     position: absolute
@@ -203,29 +199,28 @@
 
     .portfolio-container
         flex-direction: row
+        .brushstroke path
+            stroke-dasharray: 461
+            stroke-dashoffset: 461
         .thumbnail
             margin-bottom: 0px
             margin-right: 4vw
             cursor: pointer
             &:hover
-                h4
-                    &:before
-                        opacity: 1
-                        background-size: 24vw
-                        width: 24vw
-                        max-width: 24vw
+                .brushstroke path
+                    -webkit-animation-name:  line_anim 
+                    -moz-animation-name:  line_anim
+                    -o-animation-name:  line_anim
+                    animation-name:  line_anim
+                    animation-duration: 1000ms
+                    animation-fill-mode: forwards
         .thumbnail-image-container
             height: 14.4vw
             width: 24vw
         h4
             font-size: 20px
-            &:before
-                opacity: 0
-                max-width: 0
-                transition: max-width 0.7s ease, opacity 0.7s ease
         .thumbnail-title-container
             width: 24vw
-    .project-header   
     .project-container, .contact-container
         padding: 2vw
         width: 84vw
@@ -243,11 +238,8 @@
     .project-details-container
         padding-left: 20px
          
-    .project-header
-        margin-top: 5vw
-    .contact-header
-        margin-top: 0  
     .project-header, .contact-header
+        margin-top: 0 
         h2
             font-size: 60px
             margin-bottom: 15px
@@ -263,4 +255,8 @@
         width: 64vw
     .project-screenshot-container, .project-details-container
         width: 30vw
-        
+    
+@keyframes line_anim 
+    to 
+        stroke-dashoffset: 0
+    

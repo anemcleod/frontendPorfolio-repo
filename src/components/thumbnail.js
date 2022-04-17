@@ -3,6 +3,7 @@ import {RichText} from 'prismic-reactjs'
 import { motion} from "framer-motion";
 
 import {DataContext} from '../dataContext';
+import Brushstroke from './brushstroke';
 
 const Thumbnail = ({project}) => {
 
@@ -25,6 +26,7 @@ const Thumbnail = ({project}) => {
                     </div>
 
                     <div className="thumbnail-title-container">
+                        <Brushstroke></Brushstroke>
                         <h4 className="thumbnail-title">{RichText.asText(project.data.project_name)}</h4> 
                     </div> 
             </motion.div>
