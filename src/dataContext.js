@@ -27,19 +27,18 @@ export const DataProvider = ({children}) => {
           }
         }
         fetchData()
-      }, [])
+      })
 
       useEffect(() => {
         const fetchData = async () => {
         const projects = await Client.query( Prismic.Predicates.at('document.type', 'project'),{ orderings: "[document.last_publication_date]" });
           if (projects) {
             setProjectsData(projects.results);
-            console.log(projects.results)
           }
           
         }
         fetchData()
-      }, [])
+      })
 
     return (
         <div>
