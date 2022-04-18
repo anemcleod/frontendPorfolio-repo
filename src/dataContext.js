@@ -27,7 +27,7 @@ export const DataProvider = ({children}) => {
           }
         }
         fetchData()
-      })
+      },[])
 
       useEffect(() => {
         const fetchData = async () => {
@@ -38,7 +38,7 @@ export const DataProvider = ({children}) => {
           
         }
         fetchData()
-      })
+      },[])
 
     return (
         <div>

@@ -18,7 +18,7 @@ function App() {
   const  [portfolio, setPortfolio] = useState(false)
  
   const {showProject, pageData, showContact, setShowContact} = useContext(DataContext);
-
+  
   const showContactHandler = () => {
     setShowContact(prevState => {
       return !prevState
@@ -37,7 +37,7 @@ function App() {
 
   useEffect(() =>{
     if(page === 1){
-      setTimeout(() => {scrollHandler();}, 4000)
+      setTimeout(() => {setPage(2)}, 4000)
     }
     if(page === 2){
       setPortfolio(true);
